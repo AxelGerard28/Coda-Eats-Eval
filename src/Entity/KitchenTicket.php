@@ -16,8 +16,10 @@ use Symfony\Component\Uid\Uuid;
     new GetCollection(
         uriTemplate: '/kitchen-tickets',
         paginationClientEnabled: false,
+        security: "is_granted('ROLE_USER')",
         output: KitchenTicketListOutput::class,
         provider: KitchenTicketCollectionProvider::class,
+
     ),
 ])]
 #[ORM\Entity(repositoryClass: KitchenTicketRepository::class)]

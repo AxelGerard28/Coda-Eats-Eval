@@ -23,7 +23,8 @@ final class UserRegisterProcessor implements ProcessorInterface
         Operation $operation,
         array $uriVariables = [],
         array $context = [],
-    ): UserDetailsOutput {
+    ): UserDetailsOutput  {
+
         // 1. Inscrire le user
         // 2. transformer le user qu'on vient de créer en UserDetailsOutput
         // 3. Retourner le UserDetailsOutput
