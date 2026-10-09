@@ -22,7 +22,7 @@ Une section par test en échec : renseignez ses quatre champs.
 
 **Correctif** : ajouter une boucle if qui vérifie si cette liste est déja payé.
 ```php
-if (OrderStatus::Paid === $order->getStatus()) {
+if (OrderStatus::Paid === $order->getStatus()) { 
             throw new OrderAlreadyPaidException();
         }
 ```
